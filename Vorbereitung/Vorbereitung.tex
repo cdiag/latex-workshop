@@ -1,0 +1,75 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\title{Vorbereitungen für den \LaTeX -Workshop}
+\author{Oliver Manz (oliver.manz@cdi-ag.de)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Diese Dokument soll Teilnehmern an unserem \LaTeX -Workshop (April 2021) die Vorbereitung erleichtern. Damit wir im Workshop möglichst schnell arbeitsfähig sind, bitten wir alle Teilnehmer, im Vorfeld eine LaTeX-Distribution und einen Editor zu installiert.
+\par
+\textbf{Hinweis:} \LaTeX -Distributionen sind u.U. relativ groß und die Installation kann relativ lange dauern. Bitte starten Sie rechtzeitig.
+
+\end{abstract}
+
+\section{Einleitung}
+Um \LaTeX verwenden zu können, benötigen Sie zwei Komponenten: eine Distribution sowie einen geeigneten Editor. Im Folgenden haben wir eine Anleitung für die gängigen Betriebssysteme erstellt. Sollten Sie hiermit nicht zum Erfolg kommen, wenden Sie sich für eine Hilfestellung bitte an den Dozenten. Viel Erfolg.
+
+\section{Linux / RHEL, CentOS, Fedora und Co.}
+\label{rhel}
+\subsection{TeX Live}
+Die Installation kann über den Package Manager dnf\footnote{Bei älteren Betriebssystemen verwenden Sie Vorläufer yum.} erfolgen.
+
+\begin{lstlisting}[language=bash]
+sudo dnf install -y textlive
+\end{lstlisting}
+
+TeX Live installiert per default das Schema texlive-scheme-basic mit den Basispaketen. Sie können die gesamte Distribution (1,7 GB) mit textlive-scheme-full installieren. 
+
+\subsection{Editor}
+
+Unter KDE gibt es den hervorragenden Editor Kile:
+\begin{lstlisting}[language=bash]
+sudo dnf install -y kile
+\end{lstlisting}
+Eine ebenfalls sehr gute Alternative ist TexStudio:
+\begin{lstlisting}[language=bash]
+sudo dnf install -y texstudio
+\end{lstlisting}
+
+\section{Linux / Debian, Ubuntu und Co.}
+\subsection{TeX Live}
+Die Installation erfolgt über den Package Manager apt-get. In der Basis-Variante mit:
+
+\begin{lstlisting}[language=bash]
+sudo apt-get install texlive-base
+\end{lstlisting}
+Die gesamte Distribution installieren Sie mit:
+\begin{lstlisting}[language=bash]
+sudo apt-get install texlive-full
+\end{lstlisting}
+
+\subsection{Editor}
+
+Wie schon unter (\ref{rhel}) empfehlen wir entweder Kile oder TexStudio
+\begin{lstlisting}[language=bash]
+sudo apt-get install kile
+\end{lstlisting}
+oder
+\begin{lstlisting}[language=bash]
+sudo apt-get install texstudio
+\end{lstlisting}
+
+\section{Windows}
+Eine gute Anleitung für die Installation von TeX unter Windows finden Sie auf der Homepage der \href{https://www.dante.de/installation-von-tex-live-unter-windows/}{Dante} \footnote{Deutschsprachige Anwendervereinigung TeX e.V.}. Folgen Sie den Anweisungen auf der Seite. Der Editor \href{https://github.com/TeXworks/texworks/releases}{TeX Works} wird mit der Installation von TeX Live automatisch  installiert.
+
+\section{MacOS}
+Eine vollständiges Paket bestehend aus TeX Live und dem Editor TeXShop bietet die Distribution MacTeX, welche unter \href{https://www.tug.org/mactex/}{https://www.tug.org/mactex/} einen Installer zur Verfügung stellt. 
+
+\end{document}
