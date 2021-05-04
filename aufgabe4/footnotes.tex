@@ -1,0 +1,39 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+
+\begin{document}
+\section{Erwartung}
+Georg Simon Ohm formulierte das nach ihm benannte Ohmsche Gesetz zu:
+ $$R = \frac{U}{I} = const$$
+Umstellen nach I ergibt leicht:
+ $$I = \frac{U}{R}$$
+
+\section{Fehlerabschätzung}
+
+Folgende Eingangsfehler sind bekannt:
+\begin{itemize}
+ \item Genauigkeit des Voltmeters: 1\%
+ \item Genauigkeit des Referenzwiderstandes: 0.5\%
+ \item Genauigkeit des Amperemeters: 1\%
+\end{itemize}
+
+Es gilt die Gaussche Fehlerfortpflanzung mit
+
+\begin{equation}
+ u = \sqrt{\sum_{i=1}^{n}\left[ \frac{\partial f(x)}{\partial x_i} \right]^2 \cdot u_{x_i}^2}
+\end{equation}
+Damit ergibt sich für das Ohmsche Gesetz: 
+\begin{align}
+ u &= \sqrt{\left( \frac{\partial I}{\partial U}u_U \right)^2 + \left( \frac{\partial I}{\partial R}u_R \right)^2}
+\end{align}
+\begin{align}
+ &= \sqrt{\left(R^{-1}u_U\right)^2 + \left( U\cdot R^{-2}u_R \right)^2}
+ \label{eq:gauss}
+\end{align}
+Setzt man die Werte aus den Versuchsreihen nun in (\ref{eq:gauss}) ein, so erhält man...
+
+\end{document}
+
+
