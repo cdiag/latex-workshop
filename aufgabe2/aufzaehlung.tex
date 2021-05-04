@@ -1,0 +1,33 @@
+\documentclass[a5paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Diese beiden Syntaxformen sind äquivalent!
+%\setlength\parindent{0em}
+%\setlength{\parskip}{0em}
+%\renewcommand\labelitemi{-}
+%\renewcommand\labelitemii{-!-}
+
+\begin{document}
+Aufzählung: \\ 
+ \begin{enumerate}
+  \item Erster Punkt.
+  \item Zweiter Punkt.
+  \begin{enumerate}
+    \item Punkt 1a
+    \item Punkt 1b    
+  \end{enumerate}  
+  \item Dritter Punkt.
+ \end{enumerate}
+Auflistung: \\
+ \begin{itemize}
+  \item Erster Punkt.
+  \item Zweiter Punkt.
+  \begin{itemize}
+    \item Punkt 1a
+    \item Punkt 1b    
+  \end{itemize}  
+  \item Dritter Punkt.
+ \end{itemize}  
+\end{document}
+
+
